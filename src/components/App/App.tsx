@@ -7,7 +7,7 @@ import {
 import { useEffect } from 'react';
 import { AuthPage } from 'components/Auth';
 import { selectAuthUser } from 'services/redux/auth/selectors';
-import { HomePage } from 'components/Home/HomePage';
+import { HomePage } from 'components/Home/HomaPage/HomePage';
 import { selectIsAppLoaded } from 'services/redux/commonSelectors';
 
 export const App = () => {
