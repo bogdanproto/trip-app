@@ -9,7 +9,7 @@ export const InputForm = styled.input`
 
   border: 1px solid ${({ theme }) => theme.colorInputBorder};
   box-shadow: ${({ theme }) => theme.shadowInput};
-  border-radius: 8px;
+  border-radius: 6px;
 
   color: ${({ theme }) => theme.colorInputText};
 

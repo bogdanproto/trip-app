@@ -1,6 +1,6 @@
 export const theme: Record<string, string> = {
   /* Colors */
-  // colorBcg: 'rgba(21, 21, 21, 100%)',
+  colorCardBcg: 'rgba(211, 211, 211, 0.3)',
   // colorLoader: 'rgba(5, 129, 146, 100%)',
   colorLogo: 'rgba(5, 129, 146, 90%)',
   // colorTextLogo: 'rgba(5, 129, 146, 90%)',
@@ -8,7 +8,7 @@ export const theme: Record<string, string> = {
   // colorTopMenu: 'rgb(42, 42, 42, 90%)',
   // colorMainMenu: '#242424',
   // colorCardEqp: 'rgba(5, 129, 146, 0.7)',
-  // colorMainText: 'rgba(217, 217, 217, 80%)',
+  colorMainText: 'rgba(217, 217, 217, 100%)',
   // colorFocusText: 'rgba(255, 255, 255, 90%)',
   // colorPlaceholfer: 'rgba(184, 184, 184, 0.434)',
 
@@ -31,6 +31,9 @@ export const theme: Record<string, string> = {
   // /* Style */
   shadowInput: '0px 4px 16px rgba(22, 22, 22, 0.08)',
   cubicTransition: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
+
+  scrollbarTrackColor: '#FFFFFF',
+  scrollbarThumbColor: '#E8E8E8',
 
   // radiusButtonForm: '8px',
   // --radius-input: 4px;

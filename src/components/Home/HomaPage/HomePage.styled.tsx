@@ -6,5 +6,5 @@ export const HomePageContainer = styled.div`
 `;
 
 export const MainContent = styled.div`
-  width: 100vw;
+  width: 100%;
 `;

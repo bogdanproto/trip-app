@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const BottomContentContainer = styled.div`
-  width: 100%;
-  height: 200px;
-  background-color: blue;
+  box-sizing: border-box;
+
+  width: calc(100vw - 520px);
+  height: 270px;
+
+  padding: 36px;
 `;

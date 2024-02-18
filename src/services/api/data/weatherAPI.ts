@@ -11,9 +11,11 @@ export const getWeatherTodayAPI = async ({
     key: REACT_APP_KEY,
     contentType: 'json',
   };
+
   const data = await weatherAPI.get(`/${title}/today`, {
     params,
   });
+
   return data;
 };
 

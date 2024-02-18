@@ -17,8 +17,8 @@ const initialState: ISliceData = {
   trips: [],
   activeTrip: {
     _id: null,
-    weatherToday: null,
-    weatherByDay: null,
+    weatherToday: [],
+    weatherByDay: [],
   },
   cities: [],
   errorData: null,
