@@ -1,7 +1,10 @@
 interface IBaseRoute {
-  BASEURL: string;
+  BACKEND: string;
+  WEATHER: string;
 }
 
 export const routeAPI: IBaseRoute = {
-  BASEURL: 'https://trip-app-api-rgwn.onrender.com/',
+  BACKEND: 'https://trip-app-api-rgwn.onrender.com/',
+  WEATHER:
+    'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline',
 };

@@ -15,6 +15,8 @@ export const handleRejectedData = (
 };
 
 export const handleDefaultData = (state: ISliceData) => {
+  state.cities = [];
+  state.trips = [];
   state.errorData = null;
   state.isLoading = false;
 };
