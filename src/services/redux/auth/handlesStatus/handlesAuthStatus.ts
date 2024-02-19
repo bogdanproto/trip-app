@@ -1,21 +1,6 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { ISliceAuthUser, IUserLogInSuccess } from 'interfaces';
 
-//--------------SignUp User-----------------
-
-export const handleFulfilledSignUp = (
-  state: ISliceAuthUser,
-  action: PayloadAction<IUserLogInSuccess>
-) => {
-  const { user, token } = action.payload;
-
-  state.isLoading = false;
-  state.isLoggedIn = true;
-  state.errorAuth = null;
-  state.token = token;
-  state.user = { ...state.user, ...user };
-};
-
 //--------------LogIn User-----------------
 
 export const handleFulfilledLogIn = (
