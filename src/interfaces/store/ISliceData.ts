@@ -21,6 +21,7 @@ export interface ISliceData {
   trips: ITrip[];
   activeTrip: ITripActive;
   cities: ICities[];
+  filter: string | null;
   errorData: string | null;
   succesMsg: string | null;
   isLoading: boolean;

@@ -8,6 +8,7 @@ export const TimerBox = styled.div`
 
   h3 {
     font-size: 36px;
+    color: ${({ theme }) => theme.colorMainText};
   }
 `;
 

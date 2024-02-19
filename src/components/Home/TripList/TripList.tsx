@@ -1,17 +1,17 @@
 import { useTypeSelector } from 'services/redux/customHook/typeHooks';
 import { TripListContainer } from './TripList.styled';
-import { selectTrips } from 'services/redux/data/selectors';
+import { selectfilteredTrips } from 'services/redux/data/selectors';
 import { Card } from '../Card/Card';
 import { ITrip } from 'interfaces/store/ISliceData';
 import { AddTripBtn } from '../AddTripBtn/AddTripBtn';
 
 export const TripList = () => {
-  const trips = useTypeSelector(selectTrips);
+  const filteredTrips = useTypeSelector(selectfilteredTrips);
 
   return (
     <TripListContainer>
-      {trips.length > 0 &&
-        trips.map((trip: ITrip) => <Card key={trip._id} trip={trip} />)}
+      {filteredTrips.length > 0 &&
+        filteredTrips.map((trip: ITrip) => <Card key={trip._id} trip={trip} />)}
       <li>
         <AddTripBtn />
       </li>

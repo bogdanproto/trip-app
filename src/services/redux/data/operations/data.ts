@@ -20,8 +20,8 @@ export const getAllTrip = createAsyncThunk(
 export const createTrip = createAsyncThunk(
   'data/createTrip',
   asyncThunkDecoratorData(async (obj: ITripCreate) => {
-    const data = await createTripAPI(obj);
-    return data;
+    const { trip } = await createTripAPI(obj);
+    return trip;
   })
 );
 

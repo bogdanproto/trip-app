@@ -5,7 +5,7 @@ import { useModal } from 'services/helpers';
 import { FormAddTrip } from '../FormAddTrip/FormAddTrip';
 
 export const AddTripBtn = () => {
-  const { isOpen, toggle } = useModal();
+  const { isOpen, close, toggle } = useModal();
   return (
     <>
       <AddTripBtnStyled onClick={toggle}>
@@ -13,7 +13,7 @@ export const AddTripBtn = () => {
         Add trip
       </AddTripBtnStyled>
       <ModalWindow isOpen={isOpen} onClose={toggle}>
-        <FormAddTrip />
+        <FormAddTrip onClose={close} />
       </ModalWindow>
     </>
   );

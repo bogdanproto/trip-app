@@ -21,6 +21,7 @@ const initialState: ISliceData = {
     weatherByDay: [],
   },
   cities: [],
+  filter: '',
   errorData: null,
   succesMsg: null,
   isLoading: false,
@@ -29,7 +30,11 @@ const initialState: ISliceData = {
 const dataSlice = createSlice({
   name: 'data',
   initialState,
-  reducers: {},
+  reducers: {
+    setFilter: (state, action) => {
+      state.filter = action.payload;
+    },
+  },
   extraReducers: builder => {
     builder
       .addCase(logOutUser.fulfilled, handleDefaultData)
@@ -59,4 +64,4 @@ const dataSlice = createSlice({
 });
 
 export const dataSliceReducer = dataSlice.reducer;
-// export const {} = dataSlice.actions;
+export const { setFilter } = dataSlice.actions;

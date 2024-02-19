@@ -11,7 +11,7 @@ export const BottomContent = () => {
       {forecast.length > 0 ? (
         <ForecastList forecast={forecast} />
       ) : (
-        <p>Select your trip for forecast</p>
+        <h4>Select your trip for forecast</h4>
       )}
     </BottomContentContainer>
   );

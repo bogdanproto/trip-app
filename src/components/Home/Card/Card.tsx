@@ -1,7 +1,11 @@
 import { ITrip } from 'interfaces/store/ISliceData';
 import { CardContainer } from './Card.styled';
-import { useTypeDispatch } from 'services/redux/customHook/typeHooks';
+import {
+  useTypeDispatch,
+  useTypeSelector,
+} from 'services/redux/customHook/typeHooks';
 import { getWeatherByCity } from 'services/redux/data/operations/weather';
+import { selectActiveTrip } from 'services/redux/data/selectors';
 
 interface CardProps {
   trip: ITrip;
@@ -9,6 +13,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ trip }) => {
   const dispatch = useTypeDispatch();
+  const { _id } = useTypeSelector(selectActiveTrip);
 
   const handleClick = () => {
     dispatch(getWeatherByCity({ ...trip, title: trip.item.title }));
@@ -16,7 +21,7 @@ export const Card: React.FC<CardProps> = ({ trip }) => {
 
   return (
     <li>
-      <CardContainer onClick={handleClick}>
+      <CardContainer onClick={handleClick} $isActive={trip._id === _id}>
         <img src={trip.item.imgCloud} alt="Card" />
         <div>
           <h4>{trip.item.title.toUpperCase()}</h4>

@@ -9,7 +9,7 @@ export const SideContent = () => {
   const { trip, weatherToday } = useTypeSelector(selectActiveTripData);
   return (
     <SideContentContainer>
-      {trip && (
+      {trip ? (
         <>
           <ForecastTodayBox>
             <h2>{dayjs(weatherToday?.datetime).format('DD MMMM')}</h2>
@@ -23,6 +23,8 @@ export const SideContent = () => {
             restTime={(dayjs(trip?.startDate).unix() - dayjs().unix()) * 1000}
           />
         </>
+      ) : (
+        <p>Select your trip for forecast</p>
       )}
     </SideContentContainer>
   );

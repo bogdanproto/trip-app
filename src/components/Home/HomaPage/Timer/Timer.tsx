@@ -26,7 +26,7 @@ export const Timer: React.FC<TimerProps> = ({ restTime }) => {
 
   return (
     <TimerBox>
-      {days > 0 ? (
+      {days >= 0 ? (
         <>
           <TimerBlock value={days} type={'days'} />
           <TimerBlock value={hours} type={'hours'} />

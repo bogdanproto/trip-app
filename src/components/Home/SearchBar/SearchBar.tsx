@@ -1,28 +1,29 @@
-import { ActionContainer, SearchBarContainer } from './SearchBar.styled';
-import { useTypeDispatch } from 'services/redux/customHook/typeHooks';
-import { logOutUser } from 'services/redux/auth/operations';
-import { Button, InputBoxIcon, InputForm } from 'components/common';
+import { InputBoxIcon, InputForm } from 'components/common';
 import { IoSearch } from 'react-icons/io5';
+import {
+  useTypeDispatch,
+  useTypeSelector,
+} from 'services/redux/customHook/typeHooks';
+import { selectFilterValue } from 'services/redux/data/selectors';
+import { setFilter } from 'services/redux/data/slice/dataSlice';
 
 export const SearchBar = () => {
   const dispatch = useTypeDispatch();
-  const handleClick = () => {
-    dispatch(logOutUser(null));
-  };
+  const filter = useTypeSelector(selectFilterValue);
+
+  const handleFilter = (evt: React.ChangeEvent<HTMLInputElement>) =>
+    dispatch(setFilter(evt.target.value));
+
   return (
-    <SearchBarContainer>
-      <h1>
-        Weather <span>forecast</span>
-      </h1>
-
-      <ActionContainer>
-        <InputBoxIcon>
-          <InputForm placeholder="Search your trip" />
-          <IoSearch />
-        </InputBoxIcon>
-
-        <Button onClick={handleClick}>Logout</Button>
-      </ActionContainer>
-    </SearchBarContainer>
+    <InputBoxIcon>
+      <InputForm
+        type="text"
+        name="filter"
+        onChange={handleFilter}
+        value={filter}
+        placeholder="Search your trip"
+      />
+      <IoSearch />
+    </InputBoxIcon>
   );
 };

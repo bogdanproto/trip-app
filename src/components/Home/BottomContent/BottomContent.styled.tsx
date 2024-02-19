@@ -7,4 +7,9 @@ export const BottomContentContainer = styled.div`
   height: 270px;
 
   padding: 36px;
+
+  h4 {
+    font-size: 18px;
+    color: ${({ theme }) => theme.colorMainText};
+  }
 `;

@@ -5,3 +5,4 @@ export * from './ButtonForm/ButtonForm.styled';
 export * from './Button/Button.styled';
 export * from './InputBoxIcon/InputBoxIcon.styled';
 export * from './Select/Select';
+export * from './Input/Input';

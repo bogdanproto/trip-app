@@ -1,5 +1,6 @@
 import { ICities } from 'interfaces/store/ISliceData';
 import { ChangeEvent } from 'react';
+import { SelectForm } from './Select.styled';
 
 interface SelectProps {
   label: string;
@@ -19,14 +20,16 @@ export const Select: React.FC<SelectProps> = ({
   onChange,
 }) => {
   return (
-    <>
+    <SelectForm>
       <label htmlFor={label}>{label}</label>
       <select id={id} name={id} value={value} onChange={onChange}>
         <option value="">{placeholder}</option>
         {options.map(({ _id, title }) => (
-          <option value={_id}>{title.toUpperCase()}</option>
+          <option key={_id} value={_id}>
+            {title.toUpperCase()}
+          </option>
         ))}
       </select>
-    </>
+    </SelectForm>
   );
 };

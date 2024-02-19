@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
-export const CardContainer = styled.div`
+interface CardContainerProps {
+  $isActive: boolean;
+}
+
+export const CardContainer = styled.div<CardContainerProps>`
   min-width: 148px;
 
   background-color: ${({ theme }) => theme.colorCardBcg};
   border-radius: 8px;
-  border: 2px solid transparent;
+  border: 2px solid
+    ${({ $isActive, theme }) => ($isActive ? theme.colorActive : 'transparent')};
+
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 
   transition: all ${({ theme }) => theme.cubicTransition};

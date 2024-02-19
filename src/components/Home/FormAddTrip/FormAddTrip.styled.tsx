@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 
-export const FormAddTripContainer = styled.form`
+export const FormAddTripContainer = styled.div`
   width: 280px;
   h4 {
   }
 `;
 
-export const FormActionElement = styled.div`
+export const FormActionElement = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 24px;
+
+  padding-top: 24px;
 
   border-top: 1px solid ${({ theme }) => theme.colorCardBcg};
 `;
@@ -27,4 +29,8 @@ export const ButtonFormBox = styled.div`
   padding-top: 8px;
 
   border-top: 1px solid ${({ theme }) => theme.colorCardBcg};
+`;
+
+export const FieldContainer = styled.div`
+  width: 100%;
 `;

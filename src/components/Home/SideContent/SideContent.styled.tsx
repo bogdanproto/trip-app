@@ -12,6 +12,11 @@ export const SideContentContainer = styled.aside`
   background-image: url('https://res.cloudinary.com/dcwqo29q0/image/upload/v1708183758/samples/trip/wallpaper.jpg');
   background-size: cover;
   background-position: center;
+
+  p {
+    font-size: 18px;
+    color: ${({ theme }) => theme.colorMainText};
+  }
 `;
 
 export const ForecastTodayBox = styled.div`

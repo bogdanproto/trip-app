@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchBarContainer = styled.div`
+export const HeaderContainer = styled.div`
   box-sizing: border-box;
 
   width: 100%;

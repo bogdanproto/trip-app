@@ -22,3 +22,17 @@ export const selectActiveTripData = createSelector(
 
 export const selectDailyForecast = (state: RootState) =>
   state.data.activeTrip.weatherByDay;
+
+export const selectFilterValue = (state: RootState) => state.data.filter;
+
+export const selectfilteredTrips = createSelector(
+  [selectTrips, selectFilterValue],
+  (arrTrips, filter) =>
+    arrTrips
+      .filter((trip: ITrip) => trip.item.title.includes(filter.toLowerCase()))
+      .sort(
+        (tripA: ITrip, tripB: ITrip) =>
+          new Date(tripA.startDate).getTime() -
+          new Date(tripB.startDate).getTime()
+      )
+);
