@@ -4,6 +4,7 @@ interface RoutesAuthAPI {
   LOGIN: string;
   LOGOUT: string;
   CURRENT: string;
+  GOOGLE: string;
 }
 
 export const routeAuthAPI: RoutesAuthAPI = {
@@ -12,4 +13,5 @@ export const routeAuthAPI: RoutesAuthAPI = {
   LOGIN: '/auth/login',
   LOGOUT: '/auth/logout',
   CURRENT: '/auth/current',
+  GOOGLE: 'auth/google',
 };

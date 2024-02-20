@@ -1,4 +1,4 @@
-import { Logo } from 'components/common';
+import { GoogleLink, Logo } from 'components/common';
 import { AuthPageContainer } from './AuthPage.styled';
 import { LoginForm } from '../LoginForm/LoginForm';
 import { SignUpForm } from '../SignUpForm/SignUpForm';
@@ -8,6 +8,7 @@ import { FormType } from 'interfaces/form/authForm';
 import { useTypeDispatch } from 'services/redux/customHook/typeHooks';
 import { toLoginUser } from 'services/redux/auth/slice/authSlice';
 import { clearUrlParams } from 'services/helpers';
+import { routeAPI, routeAuthAPI } from 'const';
 
 export const AuthPage = () => {
   const [typeForm, setTypeForm] = useState(FormType.Login);
@@ -31,7 +32,7 @@ export const AuthPage = () => {
       <Logo />
       <SwitchForm handleSwitch={handleSwitch} typeForm={typeForm} />
       {typeForm === FormType.Login ? <LoginForm /> : <SignUpForm />}
-      <a href="https://trip-app-api-rgwn.onrender.com/auth/google">Google!</a>
+      <GoogleLink link={`${routeAPI.BACKEND}${routeAuthAPI.GOOGLE}`} />
     </AuthPageContainer>
   );
 };

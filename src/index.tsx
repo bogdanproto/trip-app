@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom/client';
+import 'react-toastify/dist/ReactToastify.css';
 import { App } from './components/App/App';
 import { MainStyles } from './style/MainStyles/MainStyles';
 import { ThemeProvider } from 'styled-components';

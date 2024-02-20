@@ -4,10 +4,10 @@ export const TimerBox = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 28px;
+  gap: 18px;
 
   h3 {
-    font-size: 36px;
+    font-size: 24px;
     color: ${({ theme }) => theme.colorMainText};
   }
 `;
@@ -19,11 +19,11 @@ export const TimerBlockStyled = styled.div`
   text-align: center;
 
   h4 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   p {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   color: ${({ theme }) => theme.colorMainText};
