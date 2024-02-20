@@ -5,3 +5,4 @@ export * from './time/formatTimer';
 export * from './hooks/useModal';
 export * from './form/validateDateForm';
 export * from './form/handleFieldErr';
+export * from './url/clearUrlParams';

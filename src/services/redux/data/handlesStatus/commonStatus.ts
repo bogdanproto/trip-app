@@ -17,6 +17,11 @@ export const handleRejectedData = (
 export const handleDefaultData = (state: ISliceData) => {
   state.cities = [];
   state.trips = [];
+  state.activeTrip = {
+    _id: null,
+    weatherToday: [],
+    weatherByDay: [],
+  };
   state.errorData = null;
   state.isLoading = false;
 };

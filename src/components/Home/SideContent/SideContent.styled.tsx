@@ -1,21 +1,28 @@
 import styled from 'styled-components';
 
 export const SideContentContainer = styled.aside`
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 96px;
 
-  min-width: 520px;
+  padding: 24px;
+
+  min-width: 380px;
   height: 100vh;
   background-image: url('https://res.cloudinary.com/dcwqo29q0/image/upload/v1708183758/samples/trip/wallpaper.jpg');
   background-size: cover;
   background-position: center;
 
   p {
-    font-size: 18px;
+    font-size: 24px;
     color: ${({ theme }) => theme.colorMainText};
+  }
+  h3 {
+    font-size: 28px;
   }
 `;
 
@@ -29,7 +36,7 @@ export const ForecastTodayBox = styled.div`
   color: ${({ theme }) => theme.colorMainText};
 
   h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   div {
@@ -38,15 +45,15 @@ export const ForecastTodayBox = styled.div`
     align-items: center;
 
     svg {
-      font-size: 96px;
+      font-size: 64px;
     }
     p {
-      font-size: 64px;
+      font-size: 38px;
     }
   }
 
   h3 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: lighter;
   }
 `;

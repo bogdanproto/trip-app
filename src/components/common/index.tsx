@@ -6,3 +6,5 @@ export * from './Button/Button.styled';
 export * from './InputBoxIcon/InputBoxIcon.styled';
 export * from './Select/Select';
 export * from './Input/Input';
+export * from './GoogleLink/GoogleLink';
+export * from './Notify/Notify';

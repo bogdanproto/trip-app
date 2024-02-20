@@ -5,8 +5,6 @@ interface CardContainerProps {
 }
 
 export const CardContainer = styled.div<CardContainerProps>`
-  min-width: 148px;
-
   background-color: ${({ theme }) => theme.colorCardBcg};
   border-radius: 8px;
   border: 2px solid

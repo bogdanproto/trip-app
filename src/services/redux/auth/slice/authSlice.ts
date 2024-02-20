@@ -9,11 +9,11 @@ import {
   handleFulfilledLogIn,
   handleFulfilledLogOut,
   handleFulfilledRefresh,
-  handleFulfilledSignUp,
   handlePendingAuth,
   handleRejectedAuth,
 } from '../handlesStatus';
 import { ISliceAuthUser } from 'interfaces';
+import { setAuthToken } from 'services/api';
 
 const initialState: ISliceAuthUser = {
   user: {
@@ -32,10 +32,24 @@ const initialState: ISliceAuthUser = {
 const authUserSlice = createSlice({
   name: 'authUser',
   initialState,
-  reducers: {},
+  reducers: {
+    toLoginUser: (state, action) => {
+      const { email, name, token } = action.payload;
+
+      setAuthToken(token);
+
+      state.user.email = email;
+      state.user.name = name;
+      state.token = token;
+
+      state.isLoading = false;
+      state.isLoggedIn = true;
+      state.errorAuth = null;
+    },
+  },
   extraReducers: builder => {
     builder
-      .addCase(signUpUser.fulfilled, handleFulfilledSignUp)
+      .addCase(signUpUser.fulfilled, handleFulfilledLogIn)
       .addCase(logInUser.fulfilled, handleFulfilledLogIn)
       .addCase(logOutUser.fulfilled, handleFulfilledLogOut)
       .addCase(refreshUser.fulfilled, handleFulfilledRefresh)
@@ -61,4 +75,4 @@ const authUserSlice = createSlice({
 });
 
 export const userAuthReducer = authUserSlice.reducer;
-// export const { } =  authUserSlice.actions;
+export const { toLoginUser } = authUserSlice.actions;

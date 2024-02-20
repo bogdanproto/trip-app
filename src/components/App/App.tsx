@@ -1,4 +1,3 @@
-import { refreshUser } from 'services/redux/auth/operations/auth';
 import {
   useTypeDispatch,
   useTypeSelector,
@@ -9,6 +8,8 @@ import { AuthPage } from 'components/Auth';
 import { selectAuthUser } from 'services/redux/auth/selectors';
 import { HomePage } from 'components/Home/HomaPage/HomePage';
 import { selectIsAppLoaded } from 'services/redux/commonSelectors';
+import { refreshUser } from 'services/redux/auth/operations/auth';
+import { Notify } from 'components/common';
 
 export const App = () => {
   const { isLoggedIn } = useTypeSelector(selectAuthUser);
@@ -20,5 +21,10 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return <>{isAppLoaded && <>{isLoggedIn ? <HomePage /> : <AuthPage />}</>}</>;
+  return (
+    <>
+      <Notify />
+      {isAppLoaded && <>{isLoggedIn ? <HomePage /> : <AuthPage />}</>}
+    </>
+  );
 };
