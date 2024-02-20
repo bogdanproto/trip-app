@@ -8,11 +8,12 @@ import { FormType } from 'interfaces/form/authForm';
 import { useTypeDispatch } from 'services/redux/customHook/typeHooks';
 import { toLoginUser } from 'services/redux/auth/slice/authSlice';
 import { clearUrlParams } from 'services/helpers';
-import { routeAPI, routeAuthAPI } from 'const';
+import { routeAuthAPI } from 'const';
 
 export const AuthPage = () => {
   const [typeForm, setTypeForm] = useState(FormType.Login);
   const dispatch = useTypeDispatch();
+  const { REACT_APP_BACKEND } = process.env;
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -32,7 +33,7 @@ export const AuthPage = () => {
       <Logo />
       <SwitchForm handleSwitch={handleSwitch} typeForm={typeForm} />
       {typeForm === FormType.Login ? <LoginForm /> : <SignUpForm />}
-      <GoogleLink link={`${routeAPI.BACKEND}${routeAuthAPI.GOOGLE}`} />
+      <GoogleLink link={`${REACT_APP_BACKEND}${routeAuthAPI.GOOGLE}`} />
     </AuthPageContainer>
   );
 };
