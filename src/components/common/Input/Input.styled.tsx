@@ -9,6 +9,7 @@ export const InputStyled = styled.div`
     font-size: 12px;
     font-weight: bold;
   }
+
   label::before {
     content: '*';
     position: absolute;
@@ -19,6 +20,7 @@ export const InputStyled = styled.div`
     font-size: 14px;
     color: ${({ theme }) => theme.colorErrorsInput};
   }
+
   input {
     width: 100%;
     height: 36px;

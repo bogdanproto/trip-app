@@ -1,3 +1,7 @@
+import {
+  useTypeDispatch,
+  useTypeSelector,
+} from 'services/redux/customHook/typeHooks';
 import { Button, ErrorInputForm, Input, Select } from 'components/common';
 import {
   ButtonFormBox,
@@ -5,10 +9,6 @@ import {
   FormActionElement,
   FormAddTripContainer,
 } from './FormAddTrip.styled';
-import {
-  useTypeDispatch,
-  useTypeSelector,
-} from 'services/redux/customHook/typeHooks';
 import { selectCities } from 'services/redux/data/selectors';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { handleFieldsErr, validateDateForm } from 'services/helpers';
@@ -27,6 +27,7 @@ const initialFields = {
 
 export const FormAddTrip: React.FC<FormAddTripProps> = ({ onClose }) => {
   const options = useTypeSelector(selectCities);
+
   const [fields, setFields] = useState<ITripCreate>(initialFields);
   const [fieldsErr, setFieldsErr] = useState<ITripCreate>(initialFields);
 

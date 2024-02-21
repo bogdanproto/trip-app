@@ -2,7 +2,6 @@ import {
   useTypeDispatch,
   useTypeSelector,
 } from 'services/redux/customHook/typeHooks';
-import { Button } from '../Button/Button.styled';
 import {
   selectActiveTrip,
   selectfilteredTrips,
@@ -12,6 +11,7 @@ import { ITrip } from 'interfaces/store/ISliceData';
 import { getWeatherByCity } from 'services/redux/data/operations/weather';
 import { selectIsDataLoading } from 'services/redux/commonSelectors';
 import { ListBtnBox } from './ListBtnControl.styled';
+import { Button } from '../Button/Button.styled';
 
 enum BtnType {
   Prev = 'prev',

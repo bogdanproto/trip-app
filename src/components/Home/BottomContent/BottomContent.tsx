@@ -5,9 +5,11 @@ import { selectDailyForecast } from 'services/redux/data/selectors';
 
 export const BottomContent = () => {
   const forecast = useTypeSelector(selectDailyForecast);
+
   return (
     <BottomContentContainer>
       <h3>Daily forecast</h3>
+
       {forecast.length > 0 ? (
         <ForecastList forecast={forecast} />
       ) : (

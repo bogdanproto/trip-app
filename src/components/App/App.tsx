@@ -1,9 +1,8 @@
+import { useEffect } from 'react';
 import {
   useTypeDispatch,
   useTypeSelector,
 } from 'services/redux/customHook/typeHooks';
-
-import { useEffect } from 'react';
 import { AuthPage } from 'components/Auth';
 import { selectAuthUser } from 'services/redux/auth/selectors';
 import { HomePage } from 'components/Home/HomaPage/HomePage';
