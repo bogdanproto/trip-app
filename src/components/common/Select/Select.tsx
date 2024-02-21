@@ -22,6 +22,7 @@ export const Select: React.FC<SelectProps> = ({
   return (
     <SelectForm>
       <label htmlFor={label}>{label}</label>
+
       <select id={id} name={id} value={value} onChange={onChange}>
         <option value="">{placeholder}</option>
         {options.map(({ _id, title }) => (

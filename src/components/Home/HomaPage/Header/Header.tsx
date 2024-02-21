@@ -17,7 +17,6 @@ export const Header = () => {
 
       <ActionContainer>
         <SearchBar />
-
         <Button onClick={handleClick}>Logout</Button>
       </ActionContainer>
     </HeaderContainer>

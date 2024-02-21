@@ -6,12 +6,14 @@ import { FormAddTrip } from '../FormAddTrip/FormAddTrip';
 
 export const AddTripBtn = () => {
   const { isOpen, close, toggle } = useModal();
+
   return (
     <>
       <AddTripBtnStyled onClick={toggle}>
         <FaPlus />
         Add trip
       </AddTripBtnStyled>
+
       <ModalWindow isOpen={isOpen} onClose={toggle}>
         <FormAddTrip onClose={close} />
       </ModalWindow>

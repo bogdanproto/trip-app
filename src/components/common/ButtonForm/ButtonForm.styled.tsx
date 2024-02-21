@@ -18,6 +18,8 @@ export const ButtonForm = styled.button`
   text-align: center;
   letter-spacing: -0.02em;
 
+  cursor: pointer;
+
   color: ${({ theme }) => theme.colorButtonTextForm};
 
   transition: all ${({ theme }) => theme.cubicTransition};

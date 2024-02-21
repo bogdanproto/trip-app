@@ -1,11 +1,11 @@
-import { ITrip } from 'interfaces/store/ISliceData';
-import { CardContainer } from './Card.styled';
 import {
   useTypeDispatch,
   useTypeSelector,
 } from 'services/redux/customHook/typeHooks';
 import { getWeatherByCity } from 'services/redux/data/operations/weather';
 import { selectActiveTrip } from 'services/redux/data/selectors';
+import { ITrip } from 'interfaces/store/ISliceData';
+import { CardContainer } from './Card.styled';
 
 interface CardProps {
   trip: ITrip;

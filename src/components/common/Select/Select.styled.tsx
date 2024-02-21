@@ -9,6 +9,7 @@ export const SelectForm = styled.div`
     font-size: 12px;
     font-weight: bold;
   }
+
   label::before {
     content: '*';
     position: absolute;
@@ -39,6 +40,7 @@ export const SelectForm = styled.div`
     &:focus {
       border: 1px solid ${({ theme }) => theme.colorActive};
     }
+
     select > option {
       width: 100%;
     }

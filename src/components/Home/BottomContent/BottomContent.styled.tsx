@@ -4,12 +4,12 @@ export const BottomContentContainer = styled.div`
   box-sizing: border-box;
 
   width: calc(100vw - 380px);
-  height: 180px;
+  height: 190px;
 
   padding: 0 36px 18px 36px;
 
   h4 {
-    font-size: 18px;
+    font-size: 14px;
     color: ${({ theme }) => theme.colorMainText};
   }
 `;

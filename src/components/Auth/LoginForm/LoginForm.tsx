@@ -29,6 +29,7 @@ export const LoginForm = () => {
         <InputForm placeholder="Email" {...register('email')} />
         <ErrorInputForm>{errors.email?.message}</ErrorInputForm>
       </div>
+
       <div>
         <InputForm
           placeholder="Password"
@@ -37,6 +38,7 @@ export const LoginForm = () => {
         />
         <ErrorInputForm>{errors.password?.message}</ErrorInputForm>
       </div>
+
       <ButtonForm type="submit">Login</ButtonForm>
     </AuthForm>
   );
