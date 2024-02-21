@@ -18,23 +18,12 @@ export const SideContentContainer = styled.aside`
   background-position: center;
 
   p {
-    position: relative;
     font-size: 24px;
     color: ${({ theme }) => theme.colorMainText};
   }
 
   h3 {
     font-size: 28px;
-  }
-
-  p::before {
-    content: '°C';
-    position: absolute;
-
-    right: -24px;
-    top: -4px;
-
-    font-size: 18px;
   }
 `;
 
@@ -59,8 +48,20 @@ export const ForecastTodayBox = styled.div`
     svg {
       font-size: 64px;
     }
+
     p {
+      position: relative;
       font-size: 38px;
+    }
+
+    p::before {
+      content: '°C';
+      position: absolute;
+
+      right: -24px;
+      top: -4px;
+
+      font-size: 18px;
     }
   }
 
