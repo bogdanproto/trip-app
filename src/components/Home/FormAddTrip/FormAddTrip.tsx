@@ -110,6 +110,7 @@ export const FormAddTrip: React.FC<FormAddTripProps> = ({ onClose }) => {
           <Button type="button" onClick={onClose}>
             Cancel
           </Button>
+
           <Button type="submit">Save</Button>
         </ButtonFormBox>
       </FormActionElement>
